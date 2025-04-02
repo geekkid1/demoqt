@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table View</title>
+</head>
+<body>
+<h1>Table View</h1>
+
+<table>
+  <thead>
+  <tr class="headings">
+    <th th:each="header: ${headers}" class="column-title" th:text="${header}" />
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr class="even pointer" th:each="row: ${rows}" id="tablerow">
+    <td th:each="header: ${headers}" th:text="${row.get(header)}" />
+  </tr>
+  </tbody>
+</table>
+<!-- This form value here for testing purposes only. -->
+<form action="/table/6">
+  <input type="submit" value="Go to 6" />
+</form>
+<p>Powered by <a href="https://queue-times.com/">Queue-Times.com</a>'s free public API! Go check it out for statistics, predictions, and more.</p>
+</body>
+</html>
