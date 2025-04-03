@@ -2,10 +2,11 @@
 <html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Table View</title>
+    <title>Wait Times Table View</title>
 </head>
 <body>
-<h1>Table View</h1>
+<h1>Wait times at <span th:text="${pname}"></span></h1>
+<h3>On <span th:text="${date}"></span> at local time <span th:text="${time}"></span></h3>
 
 <table>
   <thead>
